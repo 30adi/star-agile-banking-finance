@@ -15,9 +15,10 @@
   - name: Stop old container if exists
     command: sudo docker rm -f finance_me
     ignore_errors: true
-
+  
   - name: Pull Docker image from registry
     command: sudo docker pull 30adi/finance_me:1.0
   
   - name: Run Docker container
     command: sudo docker run -d -p 8084:8081 --name finance_me 30adi/finance_me:1.0
+
