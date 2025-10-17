@@ -11,5 +11,8 @@
 
   - name : Start Docker Service
     command : sudo systemctl start docker
+    
+  - name: Deploy Docker Container
+    command: docker run -itd -p 8084:8081 docker push 30adi/finance_me:1.0
 
 
